@@ -45,7 +45,7 @@ jobs:
       
       - name: Build Docker image
         id: build
-        uses: docker/build-push-action@11be14d908760a0756f045980728ec5fb7880f74
+        uses: docker/build-push-action@67a2d409c0a876cbe6b11854e3e25193efe4e62d
         with:
           context: ./
           push: false
@@ -56,7 +56,7 @@ jobs:
       - name: Push Docker image
         id: push
         if: success()
-        uses: docker/build-push-action@11be14d908760a0756f045980728ec5fb7880f74
+        uses: docker/build-push-action@67a2d409c0a876cbe6b11854e3e25193efe4e62d
         with:
           context: ./
           push: true
