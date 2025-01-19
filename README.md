@@ -2,6 +2,23 @@
 
 Fast Crawler is a Fast API synchronous endpoint for extracting web content using Crawl4AI, with support for structured data extraction, browser automation, and advanced crawling features.
 
+# Usage
+
+```bash
+docker run -d --name fast-crawler -p 8000:8000 -e API_TOKEN=your_secret_token ghcr.io/inem0o/fast-crawler:latest
+```
+
+```yml
+  crawler-api:
+    image: ghcr.io/inem0o/fast-crawler:latest
+    ports:
+      - target: 8000
+        published: 8000
+    environment:
+      API_TOKEN: "your_secret_token"
+```
+
+You can access the swagger documentation here http://localhost:8000/docs
 
 # Authentication
 
@@ -13,7 +30,7 @@ All requests must include this token in the headers to be authorized.
 The API token must be provided in the `X-Token` header for all requests:
 
 ```bash
-curl -X POST "http://your-api-url/crawl" \
+curl -X POST "http://localhost:8000/crawl" \
      -H "X-Token: your_secret_token" \
      -H "Content-Type: application/json" \
      -d '{ ... }'

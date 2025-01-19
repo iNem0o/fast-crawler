@@ -27,3 +27,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install "fastapi[standard]"
 
 ENV PYTHONPATH="${PYTHONPATH}:/app"
+
+CMD ["fastapi", "run", "--host", "0.0.0.0", "main.py"]

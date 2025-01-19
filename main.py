@@ -16,7 +16,7 @@ if not API_TOKEN:
     raise ValueError("API_TOKEN environment variable is not set")
 
 app = FastAPI(
-    title="Web Crawler API",
+    title="Fast Crawler API",
     description="API for extracting web content using Crawl4AI",
     version="1.0.0"
 )
