@@ -1,0 +1,10 @@
+boto3
+crawl4ai
+requests
+python-dateutil
+pathlib
+beautifulsoup4
+fastapi
+uvicorn
+pydantic
+python-multipart
